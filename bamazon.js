@@ -28,7 +28,7 @@ function start() {
     });
 
     // table is an Array, so you can `push`, `unshift`, `splice` and friends
-    for (i = 0; i < results.length; i++) {
+    for (i = 0; i < results.length; i++) /{
       table.push(
         [results[i].item_id, results[i].product_name, results[i].department_name, results[i].price, results[i].stock_quantity]
       );

@@ -5,5 +5,5 @@
 ![example](https://user-images.githubusercontent.com/45009760/55418714-34e26c00-5541-11e9-9935-09f7364f641e.gif)
 ### Notice that the quantity of hats changed from 100 to 99.
 ![change](https://user-images.githubusercontent.com/45009760/55418715-34e26c00-5541-11e9-8d16-b5618e9dc278.gif)
-### If there is not enough stock for the purchasem the user will get a warning and not perfom the transaction.
+### If there is not enough stock for the purchase the user will get a warning and not perform the transaction.
 ![insuff](https://user-images.githubusercontent.com/45009760/55418716-34e26c00-5541-11e9-839e-3913323fb74c.gif)
