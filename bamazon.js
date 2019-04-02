@@ -18,7 +18,7 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) throw err;
   start();
-})
+});
 function start() {
   connection.query("SELECT * FROM `products`", function (err, results) {
     if (err) throw err;
@@ -56,19 +56,20 @@ function start() {
       .then(function (answer) {
         x = answer.first;
         y = parseInt(answer.second);
-        console.log(x);
-        console.log(y);
+      //  console.log(x);
+      //  console.log(y);
         connection.query('SELECT * FROM `products` WHERE `item_id` LIKE ?', [x], function (err, fields) {
           if (err) throw err;
-          console.log(fields[0].stock_quantity);
+         // console.log(fields[0].stock_quantity);
           z = (parseInt(fields[0].stock_quantity) - y);
-          console.log(z);
+         // console.log(z);
           cost = ((parseInt(fields[0].price)) * y);
           if (z > 0) {
             connection.query("UPDATE `products` SET `stock_quantity` = '" + z + "' WHERE `item_id` = " + x, function (err, results) {
-                if (err) throw err;
-                console.log("Your purchase today cost " + cost + "$.")
+              if (err) throw err;
+              console.log("Your purchase today cost " + cost + "$.")
               connection.end();
+              
             })
           }
           else {
